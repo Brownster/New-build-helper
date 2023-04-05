@@ -2,11 +2,15 @@ Title: Create New User on Linux Server
 
 Description:
 
-This is a Python script that allows users to create a new user on a Linux server with root access. It uses the Paramiko library to establish an SSH connection to the server, switch to the root user, and create a new user with the specified username and password.
+This application is a graphical user interface (GUI) tool for creating new users on a remote system using SSH. It is built using Python, the Tkinter library for creating the interface, and Paramiko for handling SSH connections. The main features of this app are as follows:
 
-The script also comes with a graphical user interface (GUI) built using the tkinter library. The GUI allows users to enter the required information, such as the IP address of the server, the root password, the login username and password, and the details of the new user. The script also includes a feature to hash out the password fields in the GUI for added security.
+    The app allows the user to input an IP address, root password, login user and password, new user, and new password.
+    The user can choose from three options via checkboxes: create a Linux user, create an SM user, or add a gateway SNMP configuration.
+    The user can browse and select an Excel file, which is then filtered to only include rows with specific criteria. The GUI is populated with the data from the filtered rows, and the user can navigate through them using the "Next" button.
+    Upon clicking "Create New User," the application connects to the remote system using the provided credentials and executes the appropriate commands based on the selected options.
+    An additional window is opened to display the output of the SSH session in real-time, allowing the user to monitor the progress of the operations being performed on the remote system.
 
-In addition, the script includes a dropdown menu that allows users to select the type of login function they want to use. Currently, the script only supports Linux servers with root access, but additional login functions can be added to support other types of servers.
+This app is designed to facilitate and automate the process of adding new users and applying configurations to remote systems, making the process more streamlined and user-friendly.
 
 Installation:
 
