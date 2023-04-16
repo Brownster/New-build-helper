@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New User Creator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect('http://' + document.domain + ':' + location.port);
+        socket.on('message', function(msg) {
+            const output = document.getElementById('output');
+            output.innerHTML += '<p>' + msg + '</p>';
+        });
+    </script>
 </head>
 <body>
     <h1>New User Creator</h1>
@@ -59,5 +67,8 @@
             </ul>
         {% endif %}
     {% endwith %}
+
+    <h2>Output:</h2>
+    <div id="output"></div>
 </body>
 </html>
